@@ -4,4 +4,4 @@
 2. Click [here](https://texteditor.co) to use the reccomended text editor for this, but if you have another you use, it will work the same
 3. Click open from computer and you will get a popup
 4. click fakevirus.lol.zip-->fakevirus.lol-->coolstuff.html
-5. go to line
+5. go to line 7 in the code, in the <button> tag. Change where it says 
