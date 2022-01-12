@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<h1>This is your key. It might take a minute to genorate</h1>
+<br>
+<h2>Enter the key here</h2>
+<h2>If it has undefined in it, thats a glitch, just reload and move on.</h2>
+<form>
+  <input type="text" maxlength="20">
+</form>
+
+<script>
+  function genorateKey() {
+    var key;
+    var code = "xxx";
+    var counter = 0;
+    var counter2 = 0;
+    var randNum = 0;
+    var turnNum = 0;
+    var keys = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "!", "@", "#", "$", "%", "^", "&", "*"];
+    while(counter <= 20) {
+      turnNum++;
+      randNum = Math.round(Math.random() * (69 - 1) + 1);
+      console.log(randNum + ":" + turnNum);
+      key = keys[randNum];
+      if(code === "xxx") {
+          code = keys[randNum];
+      }
+      else {
+        code = code + key;
+      }
+      while(key === "undefined") {
+        key = keys[randNum];
+      }
+      document.write(key);
+      console.log(counter);
+      counter++;
+    }
+    console.log(code);
+   };
+   genorateKey();
+</script> 
