@@ -50,15 +50,8 @@
   <h3>Enter your credit card:</h3>
   <form>
     <input type="text" pattern="\d*" minlength="16" maxlength="16" id="cc_input" name="cc_num">
-    <script>
-      if(document.getElementById("cc_input").toString().length() < 16) {
-        var nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-        document.write('<span id="error1">UNEXPECTED ERROR: credit card number was not long enough. Error code: </span>');
-        document.write('error1').innerHtml = document.getElementById("error1") + nums[Math.round(Math.random(1, 10))] + nums[Math.round(Math.random(1, 10))] + nums[Math.round(Math.random(1, 10))] + nums[Math.round(Math.random(1, 10))];  
-      }
-    </script> 
-    <a href="decryptGenorator.html" target="_top">
-        <button>Submit</button>
-    </a>
   </form>
+  <a href="decryptGenorator.html" target="_top">
+    <button>Submit</button>
+  </a>
 </body>
