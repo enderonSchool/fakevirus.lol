@@ -4,13 +4,13 @@
 <h2>Enter the key here</h2>
 <h2>If it has undefined in it, thats a glitch, just reload and move on.</h2>
 <form>
-  <input type="text" maxlength="20">
+  <input type="text" maxlength="20" id="codeEnter">
 </form>
 
 <script>
+  var code = "xxx";
   function genorateKey() {
     var key;
-    var code = "xxx";
     var counter = 0;
     var counter2 = 0;
     var randNum = 0;
@@ -38,3 +38,4 @@
    };
    genorateKey();
 </script> 
+<button onclick="if(document.getElementById('codeEnter').innerHTML === code) {window.open(haha.html, _top)};"
