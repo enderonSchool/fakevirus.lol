@@ -37,8 +37,10 @@
       }
       console.log(code);
      };
+     if(document.getElementById("codeEnter").innerHTML === code) {
+       document.write('<a href="haha.html"><button>Submit</button></a>')
+     };
      genorateKey();
   </script> 
-  <button onclick="if(document.getElementById('codeEnter').innerHTML === code) {window.open(haha.html, _top)}; else {document.write('<span>Error: code does not match input</span>')">Submit</button>
 </body>
   
